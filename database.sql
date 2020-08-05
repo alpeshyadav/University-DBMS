@@ -1,4 +1,5 @@
-create table student (
+create table student
+(
     sid varchar primary key,
     fname varchar not null,
     lname varchar not null,
@@ -10,10 +11,11 @@ create table student (
     building varchar not null,
     city varchar not null,
     course_id varchar not null references course,
-    dept_id varchar not null references dept
+    dept_id varchar not null references department
 );
 
-create table faculty (
+create table faculty
+(
     fid varchar primary key,
     fname varchar not null,
     lname varchar not null,
@@ -22,29 +24,33 @@ create table faculty (
     salary bigint not null,
     designation varchar not null,
     course_id varchar references course,
-    dept_id varchar references dept,
+    dept_id varchar references department,
     project_id varchar references project
 );
 
 
-create table course (
+create table course
+(
     course_id varchar primary key,
     name varchar not null
 );
 
-create table department (
+create table department
+(
     dept_id varchar primary key,
     name varchar not null
 );
 
 
-create table project (
+create table project
+(
     project_id varchar primary key,
     project_name varchar not null
 );
 
 
-create table per_project (
+create table per_project
+(
     fid varchar references faculty,
     project_id varchar references project,
     start_date date not null,
