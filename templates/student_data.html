@@ -1,0 +1,42 @@
+{% extends "layout.html"%}
+
+{% block title %}
+Students Data
+{% endblock %}
+
+{% block body %}
+<div class="container-display-data">
+<table>
+    <tr>
+        <th>Student Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>DOB</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone No.</th>
+        <th>House No.</th>
+        <th>Building</th>
+        <th>City</th>
+        <th>Course Id</th>
+        <th>Dept. Id</th>
+  </tr>
+{% for s in student%}
+<tr>
+    <td>{{ s.sid }}</td>
+    <td>{{  s.fname }}</td>
+    <td>{{  s.lname }}</td>
+    <td>{{ s.dob}}</td>
+    <td>{{  s.age }}</td>
+    <td>{{ s.gender }}</td>
+    <td>{{ s.phno }}</td>
+    <td>{{ s.house_no }}</td>
+    <td>{{  s.building }}</td>
+    <td>{{  s.city }}</td>
+    <td>{{ s.course_id }}</td>
+    <td>{{ s.dept_id }}</td>
+</tr>
+{% endfor%}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+nav  {
+    display: flex;
+    font-size: 18px;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5f5f5f;
+    justify-content: space-evenly;
+    z-index: 100;
+}
+
+a{  
+    padding: 10px;
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+    
+}
+
+
+a:hover {
+    background-color: #000000;
+}
+
+.container{
+    padding: 38px;
+}
+
+input[type=text], input[type=date]{
+    width: 100%;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+   
+}
+label{
+    font-size: 20px;
+}
+
+input[type=text]:focus, input[type=date]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+hr{
+    border: 1px solid #f1f1f1;
+   
+}
+
+.button{
+    background-color: #4caf50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 5px;
+    
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.success {
+    font-size: 48px;
+    margin: 250px;
+    text-align: center;
+    color: #4caf50;
+}
+
+.container-display-data {
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    margin-top: 100px;
+}
+
+table{
+    border-spacing: 7px;
+}

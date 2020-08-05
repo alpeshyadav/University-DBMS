@@ -1,0 +1,36 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Faculty
+    {% endblock %}
+{% block body%}
+   <form action="{{ url_for('faculty')}}" method="POST">
+        <form action="" method="POST">
+        <div class="container">
+            <h1>Faculty Info</h1>
+            <hr>
+            <label for="fid"><b>Faculty Id</b></label>
+            <input type="text" placeholder="Enter Faculty Id" name="fid" required>
+            <label for="fname"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="fname" required>
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lname" required>
+            <label for="dob"><b>Date of Birth</b></label>
+            <input type="date" name="dob" required>
+            <label for="gender"><b>Gender</b></label>
+            <input type="text" placeholder="Enter Gender" name="gender" required>
+            <label for="salary"><b>Salary in ₹</b></label>
+            <input type="text" min="0" placeholder="Enter Salary" name="salary" required>
+            <label for="designation"><b>Designation</b></label>
+            <input type="text" name="designation" placeholder="Enter Designation" required>
+            <label for="course_id"><b>Course Id</b></label>
+            <input type="text" placeholder="Enter Department Id" name="course_id" required>
+            <label for="dept_id"><b>Department Id</b></label>
+            <input type="text" placeholder="Enter Course Id" name="dept_id" required>
+            <label for="project_id"><b>Project Id</b></label>
+            <input type="text" placeholder="Enter Project Id" name="project_id" required>
+            
+            <button type="submit" class="button">Submit</button>
+        </div>
+    </form>
+{% endblock %}

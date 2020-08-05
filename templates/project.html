@@ -1,0 +1,35 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Project
+{% endblock %}
+
+{% block body %}
+<form action="{{url_for('project')}}" method="post">
+        <div class="container">
+            <h1>Project Info</h1>
+            <hr>
+            <label for="project_id"><b>Project Id</b></label>
+            <input type="text" placeholder="Enter Project Id" name="project_id" required>
+            <label for="project_name"><b>Project Name</b></label>
+            <input type="text" placeholder="Enter Project Name" name="project_name" required>
+            <button type="submit" class="button">Submit</button>
+        </div>
+</form>
+<form action="{{url_for('per_project')}}" method="post">
+        <div class="container">
+            <h1>Each Project Info</h1>
+            <hr>
+            <label for="fid"><b>Faculty Id</b></label>
+            <input type="text" placeholder="Enter Faculty Id" name="fid" required>
+            <label for="project_id"><b>Project Id</b></label>
+            <input type="text" maxlength="10" placeholder="Enter Project Id" name="project_id" required>
+            <label for="start_date"><b>Start Date</b></label>
+            <input type="date" name="start_date" required>
+            <label for="no_of_hours"><b>No of Hours</b></label>
+            <input type="text" placeholder="Enter No of Hours" name="no_of_hours" required>
+            
+            <button type="submit" class="button">Submit</button>
+        </div>
+</form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html"%}
+
+{% block title %}
+Faculty Data
+{% endblock %}
+
+{% block body %}
+<div class="container-display-data">
+<table>
+    <thead>
+    <tr>
+        <th>Faculty Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>Course Id</th>
+        <th>Dept. Id</th>
+        <th>Project Id</th>
+  </tr>
+  </thead>
+  <tbody>
+{% for f in faculty%}
+<tr>
+    <td>{{ f.fid }}</td>
+    <td>{{  f.fname }}</td>
+    <td>{{  f.lname }}</td>
+    <td>{{ f.dob}}</td>
+    <td>{{ f.gender }}</td>
+    <td>{{ f.salary }}</td>
+    <td>{{ f.designation }}</td>
+    <td>{{ f.course_id }}</td>
+    <td>{{ f.dept_id }}</td>
+    <td>{{ f.project_id }}</td>
+</tr>
+{% endfor%}
+  </tbody>
+</table>
+</div>
+{% endblock %}
